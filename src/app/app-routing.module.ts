@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'detalle-api',
     loadChildren: () => import('./detalle-api/detalle-api.module').then( m => m.DetalleApiPageModule)
   },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
+  },
 ];
 
 @NgModule({

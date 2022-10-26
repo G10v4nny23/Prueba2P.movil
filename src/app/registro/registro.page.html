@@ -52,30 +52,3 @@
         <ion-button (click)="save()">Registrar</ion-button>
     </div>
   </ion-content>
-
-<ion-card *ngFor="let f of users">
-  <ion-item>
-    <ion-label>
-      nombre: {{f.nombre}}
-    </ion-label>
-    <ion-label>
-      Rut: {{f.rut}}
-    </ion-label>
-    <ion-label>
-      Edad: {{f.edad}}
-    </ion-label>
-    <ion-label>
-      Direccion: {{f.direccion}}
-    </ion-label>
-    <ion-label>
-      Correo: {{f.correo}}
-    </ion-label>
-    <ion-label>
-      Contrasena {{f.contrasena}}
-    </ion-label>
-    <ion-label>
-      Telefono: {{f.telefono}}
-    </ion-label>
-  </ion-item>
-</ion-card>
-<ion-button [routerLink]="['/licores']">Licores</ion-button>
