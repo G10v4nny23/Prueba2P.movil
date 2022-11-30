@@ -1,4 +1,4 @@
-<ion-content>
+<!-- <ion-content>
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
@@ -51,4 +51,37 @@
       </ion-item>
         <ion-button (click)="save()">Registrar</ion-button>
     </div>
-  </ion-content>
+  </ion-content> -->
+
+  <ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ionc-card-tittle>Registro</ionc-card-tittle>
+      </ion-card-header>
+      <ionc-card-content>
+        <form [formGroup]="formularioRegistro"(keyup.enter)="guardar()">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input formControlName="nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Confirmar contraseña</ion-label>
+            <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+          </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="guardar()">
+        Registrarse
+      </ion-button>
+    </ionc-card-content>
+  </ion-card>
+</ion-content> 

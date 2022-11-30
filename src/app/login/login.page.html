@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-
-    <ion-title>
-      Bienvenido
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+    <ion-toolbar color="primary">
     </ion-toolbar>
   </ion-header>
+  
+  <ion-content>
+    <ion-card>
+      <ion-card-header>
+        <ionc-card-tittle>Login</ionc-card-tittle>
+      </ion-card-header>
+      <ionc-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="ingresar()">
+        Ingresar
+      </ion-button>
+    </ionc-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
 
-  <div id="container">
+  <!-- <div id="container">
       <ion-item>
         <ion-label position="floating">Correo</ion-label>
         <ion-input text="text" [(ngModel)]="Users.correo" placeholder="Ingresar Correo"></ion-input>
@@ -26,4 +46,4 @@
       <ion-button (click)="login()">Entrar</ion-button>
       <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
     </div>
-  </ion-content>
+  </ion-content> -->
